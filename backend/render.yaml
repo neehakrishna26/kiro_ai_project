@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: image-analyzer-api
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: MODEL_PATH
+        value: model.h5
+      - key: ALLOWED_ORIGINS
+        value: https://your-frontend.vercel.app,http://localhost:5173
