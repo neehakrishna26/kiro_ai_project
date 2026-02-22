@@ -9,3 +9,9 @@ ENV/
 .venv
 model.h5
 *.h5
+.venv/
+venv/
+__pycache__/
+node_modules/
+.env
+.env.*
